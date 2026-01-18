@@ -193,6 +193,7 @@ body {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn {
@@ -339,7 +340,6 @@ section.visible {
     margin-bottom: 1rem;
     font-size: 1.1rem;
     line-height: 1.8;
-    text-align: justify;
 }
 
 .about-details {
@@ -484,14 +484,18 @@ section.visible {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .clip-card {
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
     transition: all 0.4s ease;
     background-color: var(--dark-ash);
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 .clip-card:hover {
@@ -502,7 +506,8 @@ section.visible {
 .clip-thumbnail {
     position: relative;
     overflow: hidden;
-    height: 250px;
+    height: 400px;
+    aspect-ratio: 9 / 16;
 }
 
 .clip-thumbnail img {
@@ -538,10 +543,10 @@ section.visible {
 }
 
 .clip-title {
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     text-align: center;
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /* Images Section */
@@ -801,6 +806,7 @@ section.visible {
     .image-wrapper {
         width: 250px;
         height: 250px;
+        margin: 0 auto;
     }
 
     .hero-name {
@@ -810,6 +816,16 @@ section.visible {
 
     .role-text {
         font-size: 1.4rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn {
+        min-width: 200px;
+        justify-content: center;
     }
 
     .clips-grid {
