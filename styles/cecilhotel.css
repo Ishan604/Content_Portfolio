@@ -1,0 +1,283 @@
+/* Clip Detail Page Specific Styles */
+
+.clip-detail {
+    padding: 120px 0 80px;
+    min-height: 100vh;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--orange);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    transform: translateX(-5px);
+    color: var(--white);
+}
+
+.back-button svg {
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover svg {
+    transform: translateX(-3px);
+}
+
+.clip-header {
+    margin-bottom: 2rem;
+}
+
+.clip-header h1 {
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--white), var(--orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.clip-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--light-ash);
+    font-size: 0.95rem;
+}
+
+.meta-item svg {
+    color: var(--orange);
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+    background-color: var(--black);
+    object-fit: contain;  /* Add this - keeps aspect ratio and centers */
+    margin: 0 auto;       /* Add this - centers horizontally */
+    box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3);
+    border: 2px solid var(--orange);
+    animation: fadeInUp 0.8s ease;
+}
+
+.video-container video {
+    width: 40%;
+    height: auto;
+    display: block;
+    background-color: var(--black);
+}
+
+.clip-description {
+    margin: 3rem 0;
+    animation: fadeInUp 1s ease;
+}
+
+.clip-description h2 {
+    font-size: 2rem;
+    color: var(--orange);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.clip-description h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--orange);
+}
+
+.clip-description h3 {
+    font-size: 1.6rem;
+    color: var(--white);
+    margin: 2.5rem 0 1.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.clip-description h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: var(--orange);
+}
+
+.clip-description p {
+    color: var(--light-ash);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.production-info {
+    background: linear-gradient(135deg, rgba(107, 114, 128, 0.1), rgba(55, 65, 81, 0.1));
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--orange);
+    margin: 2rem 0;
+}
+
+.info-item {
+    display: flex;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item strong {
+    color: var(--orange);
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.info-item span {
+    color: var(--light-ash);
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.features-list li {
+    color: var(--light-ash);
+    padding: 0.8rem 0 0.8rem 2rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.features-list li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-size: 0.8rem;
+}
+
+.techniques-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.technique-card {
+    background: linear-gradient(135deg, rgba(107, 114, 128, 0.1), rgba(55, 65, 81, 0.1));
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.technique-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--orange);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+}
+
+.technique-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.technique-card:hover .technique-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.technique-card h4 {
+    color: var(--orange);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.technique-card p {
+    color: var(--light-ash);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.clip-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 4rem 0 2rem;
+    flex-wrap: wrap;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .clip-header h1 {
+        font-size: 2rem;
+    }
+
+    .clip-meta {
+        gap: 1rem;
+    }
+
+    .meta-item {
+        font-size: 0.85rem;
+    }
+
+    .production-info {
+        padding: 1.5rem;
+    }
+
+    .info-item {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .info-item strong {
+        width: 100%;
+    }
+
+    .techniques-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .clip-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
